@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 日本環球影城最強攻略 - USJ Guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Noto+Sans+TC:wght@300;400;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        nintendo: {
+                            red: '#E60012',
+                            blue: '#008CFF',
+                            yellow: '#FFD400',
+                        },
+                        wizard: {
+                            gold: '#C29958',
+                            deep: '#1A1A2E',
+                        },
+                        glass: 'rgba(255, 255, 255, 0.05)',
+                    },
+                    fontFamily: {
+                        sans: ['Noto Sans TC', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 6s ease-in-out infinite',
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-20px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: #050505;
+            color: #e5e7eb;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 24px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .glass-card:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.06);
+            border-color: rgba(230, 0, 18, 0.4);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #FFD400 0%, #E60012 50%, #008CFF 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 40px;
+            height: 4px;
+            background: #E60012;
+            border-radius: 2px;
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #333;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #E60012;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+
+    <!-- Progress Bar -->
+    <div class="fixed top-0 left-0 w-full h-1 z-50 bg-white/10">
+        <div id="progress" class="h-full bg-nintendo-red w-0 transition-all duration-150"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-40 w-[90%] max-w-4xl">
+        <div class="glass-card px-8 py-4 flex justify-between items-center backdrop-blur-xl">
+            <div class="font-display font-extrabold text-xl tracking-tighter flex items-center gap-2">
+                <span class="text-nintendo-red">USJ</span>
+                <span class="text-white/40 font-light">|</span>
+                <span class="text-xs uppercase tracking-[0.2em] font-medium text-white/60">Guide 2026</span>
+            </div>
+            <div class="hidden md:flex gap-6 text-sm font-medium text-white/70">
+                <span class="px-3 py-1 bg-white/5 rounded-full text-[10px] border border-white/10 uppercase tracking-widest text-nintendo-yellow">ID: M11308049</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative h-[85vh] w-full flex items-end overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-[#050505]/40 to-transparent z-10"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#050505] via-transparent to-[#050505] z-10"></div>
+            <div class="w-full h-full transform scale-105 hover:scale-100 transition-transform duration-1000">
+                <img src='https://opal.google/board/blobs/f93d45b6-ecf7-48a6-ab35-e8caad2b7a4e' alt='USJ Mario Banner' class="w-full h-full object-cover opacity-80" />
+            </div>
+        </div>
+        
+        <div class="relative z-20 w-full max-w-6xl mx-auto px-6 pb-20">
+            <div class="inline-block px-4 py-1 rounded-full bg-nintendo-red/20 border border-nintendo-red/30 text-nintendo-red text-xs font-bold tracking-widest uppercase mb-6 animate-pulse">
+                Ultimate Guide 2026
+            </div>
+            <h1 class="text-5xl md:text-7xl font-display font-extrabold text-white leading-[1.1] mb-6">
+                【大阪必玩】錢包與體力的<br/>
+                <span class="gradient-text">終極考驗？</span>
+            </h1>
+            <p class="text-lg md:text-xl text-white/60 max-w-2xl leading-relaxed font-light">
+                從馬力歐到哈利波特，一場結合「資本主義甜蜜誘惑」與「人類想像力極致」的感官盛宴。不燒腦玩遍全場的深度解析。
+            </p>
+        </div>
+    </section>
+
+    <!-- Content Body -->
+    <main class="max-w-6xl mx-auto px-6 py-24 relative">
+        
+        <!-- Intro Section -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-32 items-center">
+            <div class="lg:col-span-7">
+                <div class="p-8 md:p-12 glass-card border-l-4 border-l-nintendo-red">
+                    <p class="text-xl leading-relaxed text-white/80 font-light italic">
+                        「這不僅僅是一個主題樂園，它是一場關於電影、動漫、科技與消費心理學的高度整合。」
+                    </p>
+                    <div class="mt-8 flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-nintendo-red to-nintendo-yellow flex items-center justify-center font-bold">M</div>
+                        <div>
+                            <p class="text-sm font-bold text-white">學號：M11308049</p>
+                            <p class="text-xs text-white/40">文化IP研究與主題樂園觀察</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-5 text-white/50 space-y-6">
+                <p>在後疫情時代的旅遊浪潮中，大阪 USJ 絕對高居榜首。對於一個知識份子而言，走進 USJ，我們觀察的不只是雲霄飛車的重力加速度，更是文化 IP 如何在商業領域中完成「實體化」的範本。</p>
+            </div>
+        </div>
+
+        <!-- Section 1: Magic & Pixels -->
+        <div class="mb-32">
+            <h2 class="section-title text-3xl font-display font-bold mb-12 flex items-center gap-4">
+                <span class="text-nintendo-yellow">01.</span> 當現實被「像素化」與「魔法化」
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="glass-card p-8 group">
+                    <div class="w-14 h-14 bg-nintendo-red/20 rounded-2xl mb-6 flex items-center justify-center text-nintendo-red group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M21 6H3c-1.1 0-2 .9-2 2v8c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-10 7H8v3H6v-3H3v-2h3V8h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">超級任天堂世界</h3>
+                    <p class="text-white/60 leading-relaxed mb-6">
+                        將遊戲邏輯植入現實空間的「遊戲化（Gamification）」設計。透過 Power-Up Band 手環互動，你不再是觀眾，而是參與感官競賽的玩家。
+                    </p>
+                    <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                        <div class="h-full bg-nintendo-red w-3/4"></div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 group">
+                    <div class="w-14 h-14 bg-wizard-gold/20 rounded-2xl mb-6 flex items-center justify-center text-wizard-gold group-hover:scale-110 transition-transform">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z"/></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">哈利波特魔法世界</h3>
+                    <p class="text-white/60 leading-relaxed mb-6">
+                        對「沉浸式敘事」的極致追求。聳立的霍格華茲城堡與活米村，成功模糊了地理邊界。一杯奶油啤酒，補足了流失的血糖與夢想。
+                    </p>
+                    <div class="h-1 w-full bg-white/5 rounded-full overflow-hidden">
+                        <div class="h-full bg-wizard-gold w-full"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Strategy/Bento Grid -->
+        <div class="mb-32">
+            <h2 class="section-title text-3xl font-display font-bold mb-12 flex items-center gap-4">
+                <span class="text-nintendo-blue">02.</span> 專業玩家的「資訊生存法則」
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-6 h-auto md:h-[600px]">
+                <div class="md:col-span-2 md:row-span-2 glass-card p-8 flex flex-col justify-end bg-gradient-to-br from-nintendo-blue/10 to-transparent">
+                    <span class="text-5xl font-display font-extrabold text-white/10 mb-4">01</span>
+                    <h3 class="text-3xl font-bold mb-4">快速通關 (Express Pass)</h3>
+                    <p class="text-white/60">在熱門設施動輒排隊 150 分鐘的現實面前，快通是保持個人文明儀態與情緒穩定的唯一解藥。砸錢買時間，在 USJ 是絕對的真理。</p>
+                </div>
+                <div class="md:col-span-2 glass-card p-8 bg-nintendo-yellow/5">
+                    <h3 class="text-xl font-bold mb-2">動態門票 (A to E)</h3>
+                    <p class="text-sm text-white/50">極佳的價格分流手法。出發前務必確認票價等級，這不僅關乎荷包，更預示了當天的人潮密度。</p>
+                </div>
+                <div class="glass-card p-8 bg-white/5">
+                    <h3 class="text-xl font-bold mb-2">早鳥作戰</h3>
+                    <p class="text-sm text-white/50">提早 1.5 小時排隊，入園立刻搶 e整理券。</p>
+                </div>
+                <div class="glass-card p-8 bg-white/5">
+                    <h3 class="text-xl font-bold mb-2">單人優先</h3>
+                    <p class="text-sm text-white/50">遺憾美學：節省一半時間，在尖叫面前，身邊的人是誰不重要。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 3: The Realities (Negative side) -->
+        <div class="mb-32">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-display font-bold mb-4">避不掉的真心話</h2>
+                <p class="text-white/40">夢想工廠背後的現實遺憾與情感摩擦</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="p-8 border border-white/5 rounded-3xl hover:bg-white/5 transition-colors">
+                    <div class="text-nintendo-red mb-4 uppercase tracking-tighter font-bold text-xs">Reality 01</div>
+                    <h4 class="text-lg font-bold mb-3 italic">Pay to Win 門檻</h4>
+                    <p class="text-white/50 text-sm leading-relaxed">快樂被標價出售。如果不買快通，遊玩體驗會大打折扣，這種文化讓一部分遊客感到焦慮。</p>
+                </div>
+                <div class="p-8 border border-white/5 rounded-3xl hover:bg-white/5 transition-colors">
+                    <div class="text-nintendo-red mb-4 uppercase tracking-tighter font-bold text-xs">Reality 02</div>
+                    <h4 class="text-lg font-bold mb-3 italic">人潮恐懼症</h4>
+                    <p class="text-white/50 text-sm leading-relaxed">追求悠閒的旅人慎入。即使是離峰時段，熱門區域依然擠得水洩不通，更像是一場疲於奔命的遠征。</p>
+                </div>
+                <div class="p-8 border border-white/5 rounded-3xl hover:bg-white/5 transition-colors">
+                    <div class="text-nintendo-red mb-4 uppercase tracking-tighter font-bold text-xs">Reality 03</div>
+                    <h4 class="text-lg font-bold mb-3 italic">消費通膨</h4>
+                    <p class="text-white/50 text-sm leading-relaxed">禁帶外食且餐飲昂貴。結合不斷調漲的門票，造訪一次 USJ 的成本對於預算型旅人來說日益吃重。</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 4: Future USJ 3.0 -->
+        <div class="relative py-24 px-8 md:px-16 glass-card overflow-hidden">
+            <div class="absolute top-0 right-0 w-64 h-64 bg-nintendo-blue/10 blur-[100px]"></div>
+            <div class="absolute bottom-0 left-0 w-64 h-64 bg-nintendo-red/10 blur-[100px]"></div>
+            
+            <div class="relative z-10">
+                <h2 class="text-4xl font-display font-extrabold mb-12 tracking-tight">未來展望：<br/><span class="text-nintendo-blue">戰力持續膨脹的 USJ 3.0</span></h2>
+                
+                <div class="space-y-12">
+                    <div class="flex gap-8 items-start group">
+                        <div class="w-1 h-12 bg-nintendo-yellow group-hover:h-24 transition-all duration-500"></div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">大金剛國度 (Donkey Kong Country)</h4>
+                            <p class="text-white/50 leading-relaxed max-w-2xl">利用創新的軌道技術模擬「跳躍」效果，這將進一步鞏固任天堂園區的霸主地位。</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-8 items-start group">
+                        <div class="w-1 h-12 bg-nintendo-blue group-hover:h-24 transition-all duration-500"></div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">寶可夢 (Pokémon) 的下一步</h4>
+                            <p class="text-white/50 leading-relaxed max-w-2xl">想像一下，若是皮卡丘與他的夥伴們有了自己的專屬區域，那將會是怎樣一場席捲全球的狂熱？</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-8 items-start group">
+                        <div class="w-1 h-12 bg-white/20 group-hover:h-24 transition-all duration-500"></div>
+                        <div>
+                            <h4 class="text-xl font-bold mb-2">全面數位化的實境對戰</h4>
+                            <p class="text-white/50 leading-relaxed max-w-2xl">整座樂園正在轉化為一個「巨大的實境遊戲場」，這在娛樂科技界具有指標性意義。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="mt-32 text-center">
+            <h3 class="text-4xl md:text-5xl font-display font-bold mb-8">排隊很辛苦，但夢想很甜</h3>
+            <p class="text-white/60 max-w-2xl mx-auto leading-relaxed mb-12">
+                只要在進入園區的那一刻，能對著霍格華茲大喊一聲「速速前，快樂！」，那麼這場關於錢包與體力的考驗，也就值得了。
+            </p>
+            <div class="inline-flex flex-col items-center gap-4">
+                <div class="p-1 rounded-full bg-gradient-to-r from-nintendo-red via-nintendo-yellow to-nintendo-blue">
+                    <button class="px-12 py-4 bg-[#050505] rounded-full text-white font-bold hover:bg-transparent transition-all duration-300">
+                        2026 冒險開始
+                    </button>
+                </div>
+                <p class="text-xs tracking-[0.4em] text-white/30 uppercase mt-4">Student ID: M11308049</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Floating Background Elements -->
+    <div class="fixed top-1/4 -left-20 w-96 h-96 bg-nintendo-red/5 blur-[120px] -z-10 animate-float"></div>
+    <div class="fixed bottom-1/4 -right-20 w-96 h-96 bg-nintendo-blue/5 blur-[120px] -z-10 animate-pulse-slow"></div>
+
+    <script>
+        // Progress bar logic
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress").style.width = scrolled + "%";
+        };
+
+        // Reveal animations on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.glass-card').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
